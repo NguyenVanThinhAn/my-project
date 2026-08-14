@@ -240,11 +240,11 @@ button:focus-visible, input:focus-visible { outline: 2px solid #f4fbff; outline-
 .size-medium { height: 29px; font-size: 11px; }
 .size-large { height: 36px; font-size: 13px; }
 .div-samples { display: grid; gap: 6px; }
-.div-sample, .div-nested { min-height: 25px; padding: 5px 8px; color: #f6fbff; text-shadow: 1px 1px #5276a4; font-size: 10px; font-weight: 900; border: 1px solid #608dc4; border-radius: 4px; background: #8fb5e8; box-shadow: inset 1px 1px #cde2fc, inset 0 -2px #7099cd; }
-.div-info { background: #6e9edc; }
-.div-success { background: #62a665; border-color: #4f8e54; }
-.div-warning { background: #c69a54; border-color: #9f773b; }
-.div-error { color: #c65361; text-shadow: 1px 1px #f3d4d7; }
+.div-sample, .div-nested { min-height: 25px; padding: 5px 8px; color: #f6fbff; text-shadow: 1px 1px #5276a4; font-size: 10px; font-weight: 900; border: 1px solid #6293c9; border-radius: 4px; background: #8fb5e8; box-shadow: inset 1px 1px #cde2fc, inset 0 -2px #638bc2; }
+.div-info { background: #6e9edc; box-shadow: inset 1px 1px #c4ddfa, inset 0 -2px #466797; }
+.div-success { background: #62a665; border-color: #4f8e54; box-shadow: inset 1px 1px #b5e6ae, inset 0 -2px #377b44; }
+.div-warning { background: #c69a54; border-color: #a97835; box-shadow: inset 1px 1px #ffe1a2, inset 0 -2px #916327; }
+.div-error { color: #c65361; text-shadow: 1px 1px #f3d4d7; box-shadow: inset 1px 1px #e5f1ff, inset 0 -2px #5482bc; }
 .div-nested { display: grid; gap: 4px; padding: 5px; }
 .div-nested div { padding: 3px 6px; color: #5278a8; text-shadow: none; border-radius: 3px; background: #c7ddfa; }
 .confirmation-popup { padding: 10px; color: #f6fbff; text-shadow: 1px 1px #5276a4; border: 2px solid #5a82b8; border-radius: 5px; background: linear-gradient(#779ed4, #5e83ba); box-shadow: inset 1px 1px #bdd7fa, inset 0 -2px #466996; }
