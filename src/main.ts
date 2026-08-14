@@ -82,6 +82,33 @@ app.innerHTML = `
           </div>
           <p class="scrollbar-caption">Vertical / horizontal</p>
         </article>
+        <article class="showcase-card">
+          <h3>Form fields</h3>
+          <div class="showcase-stack">
+            <label class="showcase-field"><span>World name</span><input value="World 2" aria-label="World name" /></label>
+            <label class="showcase-field is-focused"><span>Seed</span><input value="847291" aria-label="Seed" /></label>
+            <label class="showcase-field is-disabled"><span>Locked option</span><input value="Unavailable" disabled aria-label="Locked option" /></label>
+          </div>
+        </article>
+        <article class="showcase-card">
+          <h3>Selection states</h3>
+          <div class="selection-grid">
+            <label class="choice-row"><span class="radio-dot is-selected"></span>Singleplayer</label>
+            <label class="choice-row"><span class="radio-dot"></span>Multiplayer</label>
+            <label class="choice-row"><span class="check-box is-checked">✓</span>Allow cheats</label>
+            <label class="choice-row is-muted"><span class="check-box"></span>Bonus chest</label>
+          </div>
+        </article>
+        <article class="showcase-card">
+          <h3>Badges & icons</h3>
+          <div class="badge-row"><span class="showcase-badge badge-success">Ready</span><span class="showcase-badge badge-warning">Beta</span><span class="showcase-badge badge-muted">Offline</span></div>
+          <div class="icon-row"><button class="showcase-icon-button" type="button" aria-label="Add">+</button><button class="showcase-icon-button" type="button" aria-label="Delete">×</button><button class="showcase-icon-button" type="button" aria-label="Settings">⚙</button></div>
+        </article>
+        <article class="showcase-card">
+          <h3>Panels & messages</h3>
+          <div class="showcase-message"><strong>World saved</strong><span>Your changes are ready to play.</span></div>
+          <div class="showcase-tooltip">Hover tooltip <span>?</span></div>
+        </article>
       </div>
     </section>
   </main>

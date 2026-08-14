@@ -146,6 +146,31 @@ button { font: inherit; }
 .horizontal-scrollbar { grid-template-columns: 20px 1fr 20px; width: 140px; height: 20px; border-radius: 4px; font-size: 9px; }
 .horizontal-scrollbar > i { width: 55px; height: 12px; }
 .scrollbar-caption { margin: 0; color: #5278a8; text-align: center; font-size: 10px; font-weight: 900; }
+.showcase-field { display: grid; gap: 3px; color: #5278a8; font-size: 10px; font-weight: 900; }
+.showcase-field input { width: 100%; height: 28px; padding: 0 8px; color: #42678f; font: inherit; border: 1px solid #628dc2; border-radius: 4px; outline: 0; background: #d0e4ff; box-shadow: inset 1px 1px #eef6ff, inset 0 -2px #91b6e4; }
+.showcase-field.is-focused input { border-color: #3f71ad; box-shadow: inset 1px 1px #eef6ff, 0 0 0 2px #b9dcff; }
+.showcase-field.is-disabled { opacity: .6; }
+.showcase-field input:disabled { cursor: not-allowed; }
+.selection-grid { display: grid; gap: 8px; }
+.choice-row { display: flex; align-items: center; gap: 8px; color: #f6fbff; text-shadow: 1px 1px #5276a4; font-size: 11px; font-weight: 800; }
+.choice-row.is-muted { opacity: .55; }
+.radio-dot, .check-box { display: grid; flex: 0 0 17px; width: 17px; height: 17px; place-items: center; border: 1px solid #6889af; background: #eff7ff; box-shadow: inset 1px 1px #fff, 1px 1px #6689b7; }
+.radio-dot { border-radius: 50%; }
+.radio-dot.is-selected { background: radial-gradient(circle, #55ba5c 0 4px, #eff7ff 5px); }
+.check-box { color: #fff; border-radius: 3px; font-size: 12px; }
+.check-box.is-checked { background: #55ad5b; }
+.badge-row, .icon-row { display: flex; align-items: center; gap: 8px; }
+.icon-row { margin-top: 15px; }
+.showcase-badge { padding: 3px 8px; color: #fff; text-shadow: 1px 1px #5276a4; font-size: 10px; font-weight: 900; border: 1px solid; border-radius: 10px; }
+.badge-success { background: #55a85b; border-color: #9be09b; }
+.badge-warning { background: #ce9b4a; border-color: #f4cb83; }
+.badge-muted { background: #7896bb; border-color: #b2cbea; }
+.showcase-icon-button { display: grid; width: 29px; height: 29px; place-items: center; color: #f6fbff; cursor: pointer; text-shadow: 1px 1px #426894; font-size: 17px; font-weight: 900; border: 1px solid #4e7fb8; border-radius: 5px; background: linear-gradient(#a7c8f4, #78a3df); box-shadow: inset 0 1px #d5e6ff, inset 0 -2px #5482bc; }
+.showcase-message { display: grid; gap: 2px; padding: 9px; color: #f6fbff; text-shadow: 1px 1px #5276a4; border: 1px solid #6293c9; border-radius: 5px; background: linear-gradient(#74bb73, #509b57); box-shadow: inset 0 1px #b5e6ae, inset 0 -2px #377b44; }
+.showcase-message strong { font-size: 12px; }
+.showcase-message span { font-size: 10px; }
+.showcase-tooltip { display: flex; align-items: center; justify-content: space-between; margin-top: 10px; padding: 6px 8px; color: #5278a8; font-size: 10px; font-weight: 900; border: 1px dashed #6e99cb; border-radius: 4px; background: #a9c9f2; }
+.showcase-tooltip span { display: grid; width: 16px; height: 16px; place-items: center; color: #f2f8ff; border-radius: 50%; background: #608bc1; }
 
 @media (max-width: 540px) {
   .game-screen { padding: 14px; }
