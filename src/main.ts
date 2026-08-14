@@ -61,7 +61,7 @@ app.innerHTML = `
         </article>
         <article class="showcase-card chat-elements-card">
           <h3>Chat elements</h3>
-          <div class="player-bubble-preview"><div class="overhead-bubble">Hello, explorer!</div><div class="voxel-player"><span class="player-head"></span><span class="player-body"></span></div></div>
+          <div class="standalone-bubble-element"><div class="overhead-bubble">Hello, explorer!</div><span class="bubble-target-head" aria-hidden="true"></span></div>
           <div class="chat-line"><strong>Alex:</strong><span>Meet at the forest spawn</span></div>
           <div class="chat-line"><strong>You:</strong><span>On my way...</span></div>
           <div class="chat-line"><strong>Mina:</strong><span>Mining diamonds<span class="message-ellipsis" aria-label="Typing"><i>.</i><i>.</i><i>.</i></span></span></div>
