@@ -41,6 +41,7 @@ app.innerHTML = `
         <section class="play-panel">
           <button class="play-button" type="button"><span class="play-icon"></span>Play</button>
           <button class="creative-toggle" type="button" aria-pressed="false"><span class="toggle-dot"></span>Creative Mode</button>
+          <button class="world-options" type="button">World options</button>
         </section>
       </div>
     </section>

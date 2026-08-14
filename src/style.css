@@ -109,7 +109,8 @@ button { font: inherit; }
 .play-icon { width: 0; height: 0; border-top: 14px solid transparent; border-bottom: 14px solid transparent; border-left: 18px solid #e3f2ff; filter: drop-shadow(2px 2px #4e739e); }
 
 .creative-toggle { display: flex; align-items: center; justify-content: center; gap: 17px; height: 32px; color: #6784b1; cursor: pointer; text-shadow: 1px 1px #cce1ff; font-size: 14px; font-weight: 900; border: 1px solid #5d8dc3; border-radius: 6px; background: linear-gradient(#b5d1f3, #98bee9); box-shadow: inset 0 1px #e1edff; }
-.creative-toggle:hover { filter: brightness(1.04); }
+.creative-toggle:hover, .world-options:hover { filter: brightness(1.04); }
+.world-options { display: flex; align-items: center; justify-content: center; width: 100%; height: 32px; color: #6784b1; cursor: pointer; text-shadow: 1px 1px #cce1ff; font-size: 14px; font-weight: 900; border: 1px solid #5d8dc3; border-radius: 6px; background: linear-gradient(#b5d1f3, #98bee9); box-shadow: inset 0 1px #e1edff; }
 .toggle-dot { width: 17px; height: 17px; border: 1px solid #6889af; border-radius: 50%; background: #eff7ff; box-shadow: inset 1px 1px #fff, 1px 1px #6689b7; }
 .creative-toggle.is-enabled { color: #316d46; }
 .creative-toggle.is-enabled .toggle-dot { background: #6fe66b; box-shadow: inset 1px 1px #d6ffd5, 1px 1px #508e60; }
