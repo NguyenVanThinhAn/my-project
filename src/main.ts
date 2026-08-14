@@ -45,6 +45,45 @@ app.innerHTML = `
         </section>
       </div>
     </section>
+    <section class="ui-showcase" aria-labelledby="ui-showcase-title">
+      <header class="showcase-heading">
+        <p class="showcase-kicker">Interface kit</p>
+        <h2 id="ui-showcase-title">UI elements</h2>
+      </header>
+      <div class="showcase-grid">
+        <article class="showcase-card">
+          <h3>Buttons</h3>
+          <div class="showcase-stack">
+            <button class="showcase-play" type="button"><span class="play-icon"></span>Play</button>
+            <button class="showcase-small-button" type="button">Create world</button>
+            <button class="showcase-small-button is-disabled" type="button" disabled>Disabled</button>
+          </div>
+        </article>
+        <article class="showcase-card">
+          <h3>Tabs & states</h3>
+          <div class="showcase-tabs"><button class="game-tab is-active" type="button">Selected</button><button class="game-tab" type="button">Default</button></div>
+          <div class="showcase-stack">
+            <div class="showcase-world-row"><span class="world-heart">♥</span>World 1</div>
+            <div class="showcase-world-row is-selected"><span class="world-heart">♥</span>World 2<span class="delete-world">×</span></div>
+          </div>
+        </article>
+        <article class="showcase-card">
+          <h3>Controls</h3>
+          <div class="showcase-stack">
+            <button class="creative-toggle" type="button"><span class="toggle-dot"></span>Creative Mode</button>
+            <button class="world-options" type="button">World options</button>
+          </div>
+        </article>
+        <article class="showcase-card scrollbar-card">
+          <h3>Scrollbars</h3>
+          <div class="scrollbar-examples">
+            <div class="demo-scrollbar vertical-scrollbar"><span>▲</span><i></i><span>▼</span></div>
+            <div class="demo-scrollbar horizontal-scrollbar"><span>◀</span><i></i><span>▶</span></div>
+          </div>
+          <p class="scrollbar-caption">Vertical / horizontal</p>
+        </article>
+      </div>
+    </section>
   </main>
 `
 
