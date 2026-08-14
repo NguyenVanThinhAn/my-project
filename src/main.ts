@@ -61,9 +61,9 @@ app.innerHTML = `
         </article>
         <article class="showcase-card chat-elements-card">
           <h3>Chat elements</h3>
-          <div class="chat-element-row"><span class="chat-avatar avatar-green">A</span><div class="chat-bubble"><strong>Alex</strong><p>Meet at the forest spawn</p></div></div>
-          <div class="chat-element-row is-self"><div class="chat-bubble"><strong>You</strong><p>On my way...</p></div><span class="chat-avatar avatar-blue">Y</span></div>
-          <div class="chat-typing"><span class="chat-avatar avatar-purple">M</span><span>Mining diamonds<span class="message-ellipsis" aria-label="Typing"><i>.</i><i>.</i><i>.</i></span></span></div>
+          <div class="chat-line"><strong>Alex:</strong><span>Meet at the forest spawn</span></div>
+          <div class="chat-line"><strong>You:</strong><span>On my way...</span></div>
+          <div class="chat-line"><strong>Mina:</strong><span>Mining diamonds<span class="message-ellipsis" aria-label="Typing"><i>.</i><i>.</i><i>.</i></span></span></div>
           <div class="chat-element-compose"><input class="chat-input" aria-label="Chat message" placeholder="Say something..." autocomplete="off"><button class="chat-send" type="button" aria-label="Send message"><span class="send-icon" aria-hidden="true">➤</span></button></div>
         </article>
         <article class="showcase-card">

@@ -121,6 +121,8 @@ button:focus-visible, input:focus-visible { outline: 2px solid #f4fbff; outline-
 .creative-toggle.is-enabled .toggle-dot { background: #6fe66b; box-shadow: inset 1px 1px #d6ffd5, 1px 1px #508e60; }
 
 .chat-elements-card { min-height: 220px; }
+.chat-line { display: flex; align-items: baseline; gap: 5px; margin-bottom: 8px; color: #f7fbff; text-align: left; text-shadow: 1px 1px #5276a4; font-size: 11px; font-weight: 800; }
+.chat-line strong { color: #e6f2ff; }
 .chat-element-row, .chat-typing { display: flex; align-items: end; gap: 7px; margin-bottom: 8px; }
 .chat-element-row.is-self { justify-content: end; }
 .chat-avatar { display: grid; flex: 0 0 25px; width: 25px; height: 25px; place-items: center; color: #fff; text-shadow: 1px 1px #42678f; font-size: 11px; font-weight: 900; border: 2px solid #d3e6ff; border-radius: 50%; box-shadow: 1px 1px #5079aa; }
