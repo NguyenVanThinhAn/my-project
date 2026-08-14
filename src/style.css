@@ -37,7 +37,7 @@ button:focus-visible, input:focus-visible { outline: 2px solid #f4fbff; outline-
 .game-tabs {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 38px;
+  height: 50px;
   background: #75a7e9;
   border-bottom: 2px solid #517fb8;
 }
@@ -50,7 +50,7 @@ button:focus-visible, input:focus-visible { outline: 2px solid #f4fbff; outline-
   cursor: pointer;
   text-shadow: 1px 1px #24426e, -1px 0 #24426e, 0 1px #24426e;
   letter-spacing: .15px;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 900;
   border: 0;
   border-right: 2px solid #4d78af;
@@ -59,6 +59,7 @@ button:focus-visible, input:focus-visible { outline: 2px solid #f4fbff; outline-
   box-shadow: inset 0 2px #c4ddff, inset 0 -2px #507fbd;
 }
 
+.game-tabs > .game-tab { font-size: 18px; }
 .game-tab:last-child { border-right: 0; }
 .game-tab.is-active { background: linear-gradient(#b8d5ff, #82acec); box-shadow: inset 0 2px #e0edff, inset 0 -2px #5a85c1; }
 .game-tab:hover { filter: brightness(1.06); }
@@ -153,6 +154,19 @@ button:focus-visible, input:focus-visible { outline: 2px solid #f4fbff; outline-
 .horizontal-scrollbar { grid-template-columns: 20px 1fr 20px; width: 140px; height: 20px; border-radius: 4px; font-size: 9px; }
 .horizontal-scrollbar > i { width: 55px; height: 12px; }
 .scrollbar-caption { margin: 0; color: #5278a8; text-align: center; font-size: 10px; font-weight: 900; }
+.ping-list { display: grid; gap: 7px; }
+.ping-row { display: grid; grid-template-columns: 38px 1fr auto; align-items: center; gap: 7px; min-height: 24px; color: #f6fbff; text-shadow: 1px 1px #5276a4; font-size: 11px; font-weight: 800; }
+.ping-value { color: #e8f3ff; font-variant-numeric: tabular-nums; }
+.ping-bars { display: flex; align-items: end; justify-content: center; gap: 2px; height: 18px; }
+.ping-bars i { display: block; width: 6px; border-radius: 1px 1px 0 0; background: #aac9ed; box-shadow: inset 1px 1px #d9eaff; }
+.ping-bars i:nth-child(1) { height: 5px; }
+.ping-bars i:nth-child(2) { height: 9px; }
+.ping-bars i:nth-child(3) { height: 13px; }
+.ping-bars i:nth-child(4) { height: 17px; }
+.ping-good i { background: #62c766; box-shadow: inset 1px 1px #b9f0b2; }
+.ping-medium i:nth-child(-n+3) { background: #e1b45f; box-shadow: inset 1px 1px #ffe2a1; }
+.ping-poor i:nth-child(-n+2) { background: #dd7474; box-shadow: inset 1px 1px #ffc0b9; }
+.ping-row.is-offline { opacity: .6; }
 .showcase-field { display: grid; gap: 3px; color: #5278a8; font-size: 10px; font-weight: 900; }
 .showcase-field input { width: 100%; height: 28px; padding: 0 8px; color: #42678f; font: inherit; border: 1px solid #628dc2; border-radius: 4px; outline: 0; background: #d0e4ff; box-shadow: inset 1px 1px #eef6ff, inset 0 -2px #91b6e4; }
 .showcase-field.is-focused input { border-color: #3f71ad; box-shadow: inset 1px 1px #eef6ff, 0 0 0 2px #b9dcff; }
@@ -192,6 +206,7 @@ button:focus-visible, input:focus-visible { outline: 2px solid #f4fbff; outline-
   .world-panel { min-height: 185px; border-right: 0; border-bottom: 2px solid #5e8fca; }
   .play-panel { padding: 18px 25px; }
   .game-tab { font-size: 10px; }
+  .game-tabs > .game-tab { font-size: 13px; }
   .ui-showcase { padding: 16px; }
   .showcase-grid { grid-template-columns: 1fr; }
 }

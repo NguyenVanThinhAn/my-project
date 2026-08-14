@@ -68,6 +68,15 @@ app.innerHTML = `
           </div>
         </article>
         <article class="showcase-card">
+          <h3>Network & ping</h3>
+          <div class="ping-list">
+            <div class="ping-row"><span class="ping-bars ping-good"><i></i><i></i><i></i><i></i></span><strong>Excellent</strong><span class="ping-value">24 ms</span></div>
+            <div class="ping-row"><span class="ping-bars ping-medium"><i></i><i></i><i></i><i></i></span><strong>Good</strong><span class="ping-value">86 ms</span></div>
+            <div class="ping-row"><span class="ping-bars ping-poor"><i></i><i></i><i></i><i></i></span><strong>Weak</strong><span class="ping-value">240 ms</span></div>
+            <div class="ping-row is-offline"><span class="ping-bars"><i></i><i></i><i></i><i></i></span><strong>Offline</strong><span class="ping-value">—</span></div>
+          </div>
+        </article>
+        <article class="showcase-card">
           <h3>Controls</h3>
           <div class="showcase-stack">
             <button class="creative-toggle" type="button"><span class="toggle-dot"></span>Creative Mode</button>
