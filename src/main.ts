@@ -55,6 +55,51 @@ tabs.forEach((tab) => {
   })
 })
 
+const worldList = document.querySelector<HTMLDivElement>('.world-list')!
+const scrollTrack = document.querySelector<HTMLSpanElement>('.scroll-track')!
+const scrollThumb = document.querySelector<HTMLElement>('.scroll-track i')!
+const scrollUp = document.querySelector<HTMLSpanElement>('.scroll-up')!
+const scrollDown = document.querySelector<HTMLSpanElement>('.scroll-down')!
+
+const syncScrollbar = () => {
+  const maxScroll = worldList.scrollHeight - worldList.clientHeight
+  const trackSpace = scrollTrack.clientHeight - scrollThumb.offsetHeight
+  const progress = maxScroll > 0 ? worldList.scrollTop / maxScroll : 0
+  scrollThumb.style.transform = `translateY(${progress * trackSpace}px)`
+  scrollUp.classList.toggle('is-disabled', worldList.scrollTop <= 0)
+  scrollDown.classList.toggle('is-disabled', worldList.scrollTop >= maxScroll)
+}
+
+const scrollWorlds = (amount: number) => {
+  worldList.scrollTo({ top: worldList.scrollTop + amount, behavior: 'smooth' })
+}
+
+scrollUp.addEventListener('click', () => scrollWorlds(-worldList.clientHeight * 0.7))
+scrollDown.addEventListener('click', () => scrollWorlds(worldList.clientHeight * 0.7))
+worldList.addEventListener('scroll', syncScrollbar)
+worldList.addEventListener('wheel', (event) => {
+  event.preventDefault()
+  scrollWorlds(event.deltaY)
+}, { passive: false })
+
+let draggingScrollbar = false
+scrollTrack.addEventListener('pointerdown', (event) => {
+  draggingScrollbar = true
+  scrollTrack.setPointerCapture(event.pointerId)
+  const bounds = scrollTrack.getBoundingClientRect()
+  const ratio = Math.max(0, Math.min(1, (event.clientY - bounds.top - scrollThumb.offsetHeight / 2) / (bounds.height - scrollThumb.offsetHeight)))
+  worldList.scrollTop = ratio * (worldList.scrollHeight - worldList.clientHeight)
+})
+scrollTrack.addEventListener('pointermove', (event) => {
+  if (!draggingScrollbar) return
+  const bounds = scrollTrack.getBoundingClientRect()
+  const ratio = Math.max(0, Math.min(1, (event.clientY - bounds.top - scrollThumb.offsetHeight / 2) / (bounds.height - scrollThumb.offsetHeight)))
+  worldList.scrollTop = ratio * (worldList.scrollHeight - worldList.clientHeight)
+})
+scrollTrack.addEventListener('pointerup', () => { draggingScrollbar = false })
+
+syncScrollbar()
+
 const worldRows = document.querySelectorAll<HTMLButtonElement>('.world-row')
 worldRows.forEach((row) => {
   row.addEventListener('click', () => {
