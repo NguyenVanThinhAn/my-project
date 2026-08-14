@@ -118,6 +118,8 @@ app.innerHTML = `
           <h3>Panels & messages</h3>
           <div class="showcase-message"><strong>World saved</strong><span>Your changes are ready to play.</span></div>
           <div class="showcase-message message-warning"><strong>Unsaved changes</strong><span>Review before leaving this screen.</span></div>
+          <div class="showcase-message message-thinking"><strong>Generating world<span class="message-ellipsis" aria-label="In progress"><i>.</i><i>.</i><i>.</i></span></strong><span>Preparing terrain and resources</span></div>
+          <div class="showcase-message message-dots"><span>Waiting for players<span class="message-ellipsis" aria-hidden="true"><i>.</i><i>.</i><i>.</i></span></span></div>
           <div class="showcase-tooltip">Hover tooltip <span>?</span></div>
         </article>
         <article class="showcase-card">
