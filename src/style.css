@@ -192,6 +192,16 @@ button:focus-visible, input:focus-visible { outline: 2px solid #f4fbff; outline-
 .showcase-message { display: grid; gap: 2px; padding: 9px; color: #f6fbff; text-shadow: 1px 1px #5276a4; border: 1px solid #6293c9; border-radius: 5px; background: linear-gradient(#74bb73, #509b57); box-shadow: inset 0 1px #b5e6ae, inset 0 -2px #377b44; }
 .showcase-message strong { font-size: 12px; }
 .message-warning { margin-top: 8px; background: linear-gradient(#d1a65d, #b9833d); border-color: #a97835; box-shadow: inset 0 1px #ffe1a2, inset 0 -2px #916327; }
+.showcase-message:hover, .showcase-tooltip:hover { animation: message-bounce .55s ease both; }
+@keyframes message-bounce {
+  0%, 100% { transform: translateY(0) scale(1); }
+  25% { transform: translateY(-5px) scale(1.02); }
+  50% { transform: translateY(1px) scale(.99); }
+  75% { transform: translateY(-2px) scale(1.01); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .showcase-message:hover, .showcase-tooltip:hover { animation: none; }
+}
 .action-state-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 8px; }
 .size-samples { display: grid; grid-template-columns: 18px 1fr; align-items: center; gap: 7px; }
 .size-label { color: #5278a8; font-size: 10px; font-weight: 900; }
