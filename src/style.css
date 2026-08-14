@@ -94,7 +94,7 @@ button:focus-visible, input:focus-visible { outline: 2px solid #f4fbff; outline-
 .world-heart { width: 17px; color: #f4464d; font-size: 15px; line-height: 1; text-shadow: 1px 1px #bf3641; }
 .world-heart.is-flat { color: #cefbff; font-size: 13px; text-shadow: 1px 1px #46959d; }
 .world-name { flex: 1; }
-.delete-world { display: grid; width: 15px; height: 15px; place-items: center; color: #ffd6d6; background: #db6660; border: 2px solid #f19489; border-radius: 50%; font-size: 13px; line-height: 1; text-shadow: none; }
+.delete-world { display: grid; width: 15px; height: 15px; align-items: center; justify-items: center; padding: 0 0 2px; color: #ffd6d6; font-family: Arial, sans-serif; font-size: 12px; line-height: 12px; text-shadow: none; background: #db6660; border: 2px solid #f19489; border-radius: 50%; }
 
 .list-scrollbar { position: absolute; top: 10px; right: 8px; bottom: 47px; display: grid; grid-template-rows: 22px 1fr 22px; width: 21px; overflow: hidden; color: #f0f6ff; text-align: center; text-shadow: 1px 1px #476c9a; border: 2px solid #4d7db7; border-radius: 4px; background: #6d9bd3; box-shadow: inset 0 0 0 2px #b2cdf0; }
 .scroll-up, .scroll-down { display: grid; place-items: center; cursor: pointer; font-size: 11px; background: linear-gradient(#b9d4f6, #7aa5dd); box-shadow: inset 0 1px #e1edff, inset 0 -2px #5280bb; }
@@ -214,7 +214,7 @@ button:focus-visible, input:focus-visible { outline: 2px solid #f4fbff; outline-
 .showcase-icon-button { display: grid; flex: 0 0 38px; width: 38px; height: 38px; min-width: 38px; padding: 0; place-items: center; overflow: hidden; color: #f6fbff; cursor: pointer; text-align: center; text-overflow: clip; white-space: nowrap; text-shadow: 2px 2px #426894; font-family: Arial, sans-serif; font-size: 24px; font-weight: 900; line-height: 1; border: 2px solid #4e78b5; border-radius: 6px; background: linear-gradient(#b5d1f7, #78a3df); box-shadow: inset 0 2px #e5f1ff, inset 0 -3px #5482bc, 1px 2px #416b9e; }
 .showcase-icon-button[aria-label="Add"] { color: #9cff9b; text-shadow: 2px 2px #31783d; }
 .showcase-icon-button[aria-label="Delete"] { color: #c65361; background: linear-gradient(#b5d1f7, #78a3df); text-shadow: 2px 2px #f3d4d7; }
-.showcase-icon-button[aria-label="Settings"] { color: #f1f7ff; font-size: 18px; }
+.showcase-icon-button[aria-label="Settings"] { color: #f1f7ff; font-size: 24px; }
 .showcase-message { display: grid; gap: 2px; padding: 9px; color: #f6fbff; text-shadow: 1px 1px #5276a4; border: 1px solid #6293c9; border-radius: 5px; background: linear-gradient(#74bb73, #509b57); box-shadow: inset 0 1px #b5e6ae, inset 0 -2px #377b44; }
 .showcase-message strong { font-size: 12px; }
 .message-warning { margin-top: 8px; color: #fff; background: linear-gradient(#d1a65d, #b9833d); border-color: #a97835; box-shadow: inset 0 1px #ffe1a2, inset 0 -2px #916327; }
