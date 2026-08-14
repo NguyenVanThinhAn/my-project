@@ -159,7 +159,7 @@ button:focus-visible, input:focus-visible { outline: 2px solid #f4fbff; outline-
 .showcase-small-button.is-pressed { transform: translateY(2px); box-shadow: inset 0 2px #6b93c5, inset 0 -1px #c4dcfa; }
 .showcase-small-button.is-loading { display: flex; align-items: center; justify-content: center; gap: 7px; }
 .loading-dot { width: 11px; height: 11px; border: 2px solid #d9ecff; border-top-color: #4a79ad; border-radius: 50%; animation: kit-spin .8s linear infinite; }
-.showcase-small-button.is-danger { color: #fff; border-color: #a64c56; background: linear-gradient(#e18a8d, #bb5b68); box-shadow: inset 0 1px #ffd3d1, inset 0 -2px #914452; }
+.showcase-small-button.is-danger { color: #c65361; border-color: #4e78b5; background: linear-gradient(#b5d1f7, #78a3df); text-shadow: 1px 1px #f3d4d7; box-shadow: inset 0 2px #e5f1ff, inset 0 -3px #5482bc, 1px 2px #416b9e; }
 @keyframes kit-spin { to { transform: rotate(360deg); } }
 .showcase-large-tabs { display: grid; grid-template-columns: 1fr 1fr; height: 38px; margin-bottom: 10px; overflow: hidden; border: 1px solid #4d78af; border-radius: 4px; }
 .showcase-large-tabs .game-tab { font-size: 14px; }
@@ -213,11 +213,11 @@ button:focus-visible, input:focus-visible { outline: 2px solid #f4fbff; outline-
 .badge-muted { background: #7896bb; border-color: #b2cbea; }
 .showcase-icon-button { display: grid; flex: 0 0 38px; width: 38px; height: 38px; min-width: 38px; padding: 0; place-items: center; overflow: hidden; color: #f6fbff; cursor: pointer; text-align: center; text-overflow: clip; white-space: nowrap; text-shadow: 2px 2px #426894; font-family: Arial, sans-serif; font-size: 24px; font-weight: 900; line-height: 1; border: 2px solid #4e78b5; border-radius: 6px; background: linear-gradient(#b5d1f7, #78a3df); box-shadow: inset 0 2px #e5f1ff, inset 0 -3px #5482bc, 1px 2px #416b9e; }
 .showcase-icon-button[aria-label="Add"] { color: #9cff9b; text-shadow: 2px 2px #31783d; }
-.showcase-icon-button[aria-label="Delete"] { color: #ffd1d1; background: linear-gradient(#e28a8c, #bb5b68); text-shadow: 2px 2px #914452; }
+.showcase-icon-button[aria-label="Delete"] { color: #c65361; background: linear-gradient(#b5d1f7, #78a3df); text-shadow: 2px 2px #f3d4d7; }
 .showcase-icon-button[aria-label="Settings"] { color: #f1f7ff; font-size: 18px; }
 .showcase-message { display: grid; gap: 2px; padding: 9px; color: #f6fbff; text-shadow: 1px 1px #5276a4; border: 1px solid #6293c9; border-radius: 5px; background: linear-gradient(#74bb73, #509b57); box-shadow: inset 0 1px #b5e6ae, inset 0 -2px #377b44; }
 .showcase-message strong { font-size: 12px; }
-.message-warning { margin-top: 8px; background: linear-gradient(#d1a65d, #b9833d); border-color: #a97835; box-shadow: inset 0 1px #ffe1a2, inset 0 -2px #916327; }
+.message-warning { margin-top: 8px; color: #c65361; background: linear-gradient(#b5d1f7, #78a3df); border-color: #4e78b5; box-shadow: inset 0 1px #e5f1ff, inset 0 -2px #5482bc; }
 .message-thinking { margin-top: 8px; background: linear-gradient(#789bd1, #5f82ba); border-color: #4e73aa; box-shadow: inset 0 1px #b9d5ff, inset 0 -2px #466797; }
 .message-dots { margin-top: 8px; display: block; }
 .message-ellipsis { display: inline-flex; min-width: 18px; margin-left: 2px; }
