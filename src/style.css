@@ -13,6 +13,7 @@
 body { margin: 0; min-width: 320px; }
 
 button { font: inherit; }
+button:focus-visible, input:focus-visible { outline: 2px solid #f4fbff; outline-offset: 2px; }
 
 .game-screen {
   display: grid;
@@ -130,6 +131,12 @@ button { font: inherit; }
 .showcase-play .play-icon { border-top-width: 9px; border-bottom-width: 9px; border-left-width: 12px; }
 .showcase-small-button { height: 29px; color: #f6fbff; text-shadow: 1px 1px #426894; font-size: 12px; font-weight: 900; border: 1px solid #4e7fb8; border-radius: 5px; background: linear-gradient(#a7c8f4, #78a3df); box-shadow: inset 0 1px #d5e6ff, inset 0 -2px #5482bc; }
 .showcase-small-button.is-disabled { color: #7898c2; cursor: not-allowed; opacity: .65; }
+.showcase-small-button.is-hovered, .showcase-icon-button:hover { filter: brightness(1.1); box-shadow: inset 0 1px #e9f4ff, 0 2px 0 #426c9f; }
+.showcase-small-button.is-pressed { transform: translateY(2px); box-shadow: inset 0 2px #6b93c5, inset 0 -1px #c4dcfa; }
+.showcase-small-button.is-loading { display: flex; align-items: center; justify-content: center; gap: 7px; }
+.loading-dot { width: 11px; height: 11px; border: 2px solid #d9ecff; border-top-color: #4a79ad; border-radius: 50%; animation: kit-spin .8s linear infinite; }
+.showcase-small-button.is-danger { color: #fff; border-color: #a64c56; background: linear-gradient(#e18a8d, #bb5b68); box-shadow: inset 0 1px #ffd3d1, inset 0 -2px #914452; }
+@keyframes kit-spin { to { transform: rotate(360deg); } }
 .showcase-tabs { display: grid; grid-template-columns: 1fr 1fr; height: 29px; margin-bottom: 8px; overflow: hidden; border: 1px solid #4d78af; border-radius: 4px; }
 .showcase-tabs .game-tab { font-size: 10px; }
 .showcase-world-row { display: flex; align-items: center; height: 27px; gap: 5px; padding: 0 7px; color: #f6fbff; text-shadow: 1px 1px #5276a4; font-size: 11px; font-weight: 800; border-radius: 4px; background: #92b9ec; box-shadow: inset 0 1px #bed9fa, inset 0 -2px #719bd0; }
@@ -168,6 +175,13 @@ button { font: inherit; }
 .showcase-icon-button { display: grid; width: 29px; height: 29px; place-items: center; color: #f6fbff; cursor: pointer; text-shadow: 1px 1px #426894; font-size: 17px; font-weight: 900; border: 1px solid #4e7fb8; border-radius: 5px; background: linear-gradient(#a7c8f4, #78a3df); box-shadow: inset 0 1px #d5e6ff, inset 0 -2px #5482bc; }
 .showcase-message { display: grid; gap: 2px; padding: 9px; color: #f6fbff; text-shadow: 1px 1px #5276a4; border: 1px solid #6293c9; border-radius: 5px; background: linear-gradient(#74bb73, #509b57); box-shadow: inset 0 1px #b5e6ae, inset 0 -2px #377b44; }
 .showcase-message strong { font-size: 12px; }
+.message-warning { margin-top: 8px; background: linear-gradient(#d1a65d, #b9833d); border-color: #a97835; box-shadow: inset 0 1px #ffe1a2, inset 0 -2px #916327; }
+.action-state-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 8px; }
+.size-samples { display: grid; grid-template-columns: 18px 1fr; align-items: center; gap: 7px; }
+.size-label { color: #5278a8; font-size: 10px; font-weight: 900; }
+.size-small { height: 24px; font-size: 10px; }
+.size-medium { height: 29px; font-size: 11px; }
+.size-large { height: 36px; font-size: 13px; }
 .showcase-message span { font-size: 10px; }
 .showcase-tooltip { display: flex; align-items: center; justify-content: space-between; margin-top: 10px; padding: 6px 8px; color: #5278a8; font-size: 10px; font-weight: 900; border: 1px dashed #6e99cb; border-radius: 4px; background: #a9c9f2; }
 .showcase-tooltip span { display: grid; width: 16px; height: 16px; place-items: center; color: #f2f8ff; border-radius: 50%; background: #608bc1; }

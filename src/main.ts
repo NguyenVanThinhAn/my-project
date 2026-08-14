@@ -107,7 +107,18 @@ app.innerHTML = `
         <article class="showcase-card">
           <h3>Panels & messages</h3>
           <div class="showcase-message"><strong>World saved</strong><span>Your changes are ready to play.</span></div>
+          <div class="showcase-message message-warning"><strong>Unsaved changes</strong><span>Review before leaving this screen.</span></div>
           <div class="showcase-tooltip">Hover tooltip <span>?</span></div>
+        </article>
+        <article class="showcase-card">
+          <h3>Action states</h3>
+          <div class="action-state-row"><button class="showcase-small-button is-hovered" type="button">Hover</button><button class="showcase-small-button is-pressed" type="button">Pressed</button></div>
+          <button class="showcase-small-button is-loading" type="button"><span class="loading-dot"></span>Loading</button>
+          <button class="showcase-small-button is-danger" type="button">Delete world</button>
+        </article>
+        <article class="showcase-card">
+          <h3>Sizes & spacing</h3>
+          <div class="size-samples"><span class="size-label">S</span><button class="showcase-small-button size-small" type="button">Compact</button><span class="size-label">M</span><button class="showcase-small-button size-medium" type="button">Default</button><span class="size-label">L</span><button class="showcase-small-button size-large" type="button">Large</button></div>
         </article>
       </div>
     </section>
