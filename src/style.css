@@ -37,7 +37,7 @@ button:focus-visible, input:focus-visible { outline: 2px solid #f4fbff; outline-
 .game-tabs {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 50px;
+  height: 38px;
   background: #75a7e9;
   border-bottom: 2px solid #517fb8;
 }
@@ -50,7 +50,7 @@ button:focus-visible, input:focus-visible { outline: 2px solid #f4fbff; outline-
   cursor: pointer;
   text-shadow: 1px 1px #24426e, -1px 0 #24426e, 0 1px #24426e;
   letter-spacing: .15px;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 900;
   border: 0;
   border-right: 2px solid #4d78af;
@@ -59,7 +59,7 @@ button:focus-visible, input:focus-visible { outline: 2px solid #f4fbff; outline-
   box-shadow: inset 0 2px #c4ddff, inset 0 -2px #507fbd;
 }
 
-.game-tabs > .game-tab { font-size: 18px; }
+.game-tabs > .game-tab { font-size: 14px; }
 .game-tab:last-child { border-right: 0; }
 .game-tab.is-active { background: linear-gradient(#b8d5ff, #82acec); box-shadow: inset 0 2px #e0edff, inset 0 -2px #5a85c1; }
 .game-tab:hover { filter: brightness(1.06); }
@@ -138,6 +138,8 @@ button:focus-visible, input:focus-visible { outline: 2px solid #f4fbff; outline-
 .loading-dot { width: 11px; height: 11px; border: 2px solid #d9ecff; border-top-color: #4a79ad; border-radius: 50%; animation: kit-spin .8s linear infinite; }
 .showcase-small-button.is-danger { color: #fff; border-color: #a64c56; background: linear-gradient(#e18a8d, #bb5b68); box-shadow: inset 0 1px #ffd3d1, inset 0 -2px #914452; }
 @keyframes kit-spin { to { transform: rotate(360deg); } }
+.showcase-large-tabs { display: grid; grid-template-columns: 1fr 1fr; height: 38px; margin-bottom: 10px; overflow: hidden; border: 1px solid #4d78af; border-radius: 4px; }
+.showcase-large-tabs .game-tab { font-size: 14px; }
 .showcase-tabs { display: grid; grid-template-columns: 1fr 1fr; height: 29px; margin-bottom: 8px; overflow: hidden; border: 1px solid #4d78af; border-radius: 4px; }
 .showcase-tabs .game-tab { font-size: 10px; }
 .showcase-world-row { display: flex; align-items: center; height: 27px; gap: 5px; padding: 0 7px; color: #f6fbff; text-shadow: 1px 1px #5276a4; font-size: 11px; font-weight: 800; border-radius: 4px; background: #92b9ec; box-shadow: inset 0 1px #bed9fa, inset 0 -2px #719bd0; }
@@ -206,7 +208,7 @@ button:focus-visible, input:focus-visible { outline: 2px solid #f4fbff; outline-
   .world-panel { min-height: 185px; border-right: 0; border-bottom: 2px solid #5e8fca; }
   .play-panel { padding: 18px 25px; }
   .game-tab { font-size: 10px; }
-  .game-tabs > .game-tab { font-size: 13px; }
+  .game-tabs > .game-tab, .showcase-large-tabs .game-tab { font-size: 12px; }
   .ui-showcase { padding: 16px; }
   .showcase-grid { grid-template-columns: 1fr; }
 }

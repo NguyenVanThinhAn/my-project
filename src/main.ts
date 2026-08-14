@@ -61,6 +61,7 @@ app.innerHTML = `
         </article>
         <article class="showcase-card">
           <h3>Tabs & states</h3>
+          <div class="showcase-large-tabs"><button class="game-tab is-active" type="button">Singleplayer</button><button class="game-tab" type="button">Multiplayer</button></div>
           <div class="showcase-tabs"><button class="game-tab is-active" type="button">Selected</button><button class="game-tab" type="button">Default</button></div>
           <div class="showcase-stack">
             <div class="showcase-world-row"><span class="world-heart">♥</span>World 1</div>
