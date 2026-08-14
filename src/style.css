@@ -135,7 +135,8 @@ button:focus-visible, input:focus-visible { outline: 2px solid #f4fbff; outline-
 .chat-element-compose { display: grid; grid-template-columns: 1fr auto; gap: 8px; margin-top: 10px; }
 .chat-input { min-width: 0; height: 34px; padding: 0 10px; color: #42678f; font: 11px 'Nunito', sans-serif; border: 1px solid #628dc2; border-radius: 5px; outline: 0; background: #d0e4ff; box-shadow: inset 1px 1px #eef6ff, inset 0 -2px #91b6e4; }
 .chat-input::placeholder { color: #7495bd; }
-.chat-send { height: 34px; padding: 0 15px; color: #f6fbff; cursor: pointer; text-shadow: 1px 1px #426894; font-size: 11px; font-weight: 900; border: 1px solid #4e7fb8; border-radius: 5px; background: linear-gradient(#a7c8f4, #78a3df); box-shadow: inset 0 1px #d5e6ff, inset 0 -2px #5482bc; }
+.chat-send { display: grid; width: 34px; height: 34px; padding: 0; place-items: center; color: #f6fbff; cursor: pointer; text-shadow: 1px 1px #426894; font-size: 18px; font-weight: 900; border: 1px solid #4e7fb8; border-radius: 5px; background: linear-gradient(#a7c8f4, #78a3df); box-shadow: inset 0 1px #d5e6ff, inset 0 -2px #5482bc; }
+.send-icon { display: block; transform: rotate(-28deg) translate(-1px, -1px); }
 .chat-send:hover { filter: brightness(1.06); }
 .ui-showcase { width: min(100%, 550px); padding: 22px; color: #31547f; border: 3px solid #6f9ed7; border-radius: 8px; background: #9bc1f2; box-shadow: 0 0 0 2px #315b91, inset 0 0 0 2px #cce2ff; }
 .showcase-heading { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 15px; }
