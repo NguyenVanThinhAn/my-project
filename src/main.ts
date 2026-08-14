@@ -23,7 +23,6 @@ app.innerHTML = `
       <nav class="game-tabs" aria-label="Game mode">
         <button class="game-tab is-active" type="button">Singleplayer</button>
         <button class="game-tab" type="button">Multiplayer</button>
-        <button class="game-tab" type="button">Server hosting</button>
       </nav>
       <div class="window-body">
         <section class="world-panel" aria-label="Saved worlds">
