@@ -122,6 +122,12 @@ button:focus-visible, input:focus-visible { outline: 2px solid #f4fbff; outline-
 
 .chat-elements-card { min-height: 220px; }
 .chat-line { display: flex; align-items: baseline; gap: 5px; margin-bottom: 8px; color: #f7fbff; text-align: left; text-shadow: 1px 1px #5276a4; font-size: 11px; font-weight: 800; }
+.player-bubble-preview { position: relative; display: flex; height: 92px; align-items: end; justify-content: center; margin: 0 -2px 10px; overflow: hidden; border: 1px solid #668fc4; border-radius: 5px; background: linear-gradient(#85b0e7 0 72%, #6eab61 72%); box-shadow: inset 0 1px #cbe1fb, inset 0 -2px #578a55; }
+.overhead-bubble { position: absolute; top: 10px; left: 50%; padding: 6px 10px; color: #42678f; white-space: nowrap; text-shadow: 1px 1px #e4f2ff; font-size: 11px; font-weight: 900; border: 2px solid #5a80b4; border-radius: 6px; background: #e4f2ff; box-shadow: 2px 2px #42678f; transform: translateX(-50%); }
+.overhead-bubble::after { position: absolute; bottom: -8px; left: 50%; width: 12px; height: 12px; content: ''; border-right: 2px solid #5a80b4; border-bottom: 2px solid #5a80b4; background: #e4f2ff; transform: translateX(-50%) rotate(45deg); }
+.voxel-player { position: relative; z-index: 1; width: 32px; height: 53px; }
+.player-head { position: absolute; top: 0; left: 5px; width: 22px; height: 22px; border: 2px solid #765238; background: #d99c70; box-shadow: inset 5px 0 #f1bf8f, 2px 2px #466c51; }
+.player-body { position: absolute; bottom: 0; left: 2px; width: 28px; height: 30px; border: 2px solid #304d78; background: linear-gradient(90deg, #4e87c9 50%, #37679e 50%); box-shadow: 2px 2px #466c51; }
 .chat-line strong { color: #e6f2ff; }
 .chat-element-row, .chat-typing { display: flex; align-items: end; gap: 7px; margin-bottom: 8px; }
 .chat-element-row.is-self { justify-content: end; }
