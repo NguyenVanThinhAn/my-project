@@ -120,6 +120,29 @@ button:focus-visible, input:focus-visible { outline: 2px solid #f4fbff; outline-
 .creative-toggle.is-enabled { color: #316d46; }
 .creative-toggle.is-enabled .toggle-dot { background: #6fe66b; box-shadow: inset 1px 1px #d6ffd5, 1px 1px #508e60; }
 
+.player-chat { width: min(100%, 550px); padding: 18px 22px 22px; color: #31547f; border: 3px solid #6f9ed7; border-radius: 8px; background: #9bc1f2; box-shadow: 0 0 0 2px #315b91, inset 0 0 0 2px #cce2ff; }
+.chat-heading { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+.chat-heading h2 { margin: 2px 0 0; color: #f4f9ff; text-shadow: 1px 1px #426b9b; font-size: 21px; font-weight: 900; }
+.chat-online { display: flex; align-items: center; gap: 5px; color: #5278a8; font-size: 10px; font-weight: 900; }
+.chat-online i { width: 8px; height: 8px; border-radius: 50%; background: #63c66b; box-shadow: 0 0 0 2px #b5e9b1; }
+.chat-history { display: grid; gap: 9px; height: 190px; padding: 12px; overflow-y: auto; border: 2px solid #6a96cf; border-radius: 5px; background: #77a3dd; box-shadow: inset 1px 1px #c4ddfa, inset 0 -2px #638bc2; }
+.chat-message { display: flex; align-items: end; gap: 7px; max-width: 88%; }
+.chat-message.is-self { justify-self: end; flex-direction: row-reverse; }
+.chat-avatar { display: grid; flex: 0 0 25px; width: 25px; height: 25px; place-items: center; color: #fff; text-shadow: 1px 1px #42678f; font-size: 11px; font-weight: 900; border: 2px solid #d3e6ff; border-radius: 50%; box-shadow: 1px 1px #5079aa; }
+.avatar-green { background: #5cae69; }
+.avatar-blue { background: #5b84c7; }
+.avatar-purple { background: #896bc0; }
+.chat-bubble { position: relative; min-width: 90px; padding: 6px 9px 5px; color: #f7fbff; text-shadow: 1px 1px #5276a4; border: 1px solid #5a83b8; border-radius: 7px 7px 7px 2px; background: linear-gradient(#a9c9f3, #84a9df); box-shadow: inset 0 1px #e0efff, inset 0 -2px #6d96c9; }
+.is-self .chat-bubble { border-radius: 7px 7px 2px 7px; background: linear-gradient(#b5d3fa, #91b5e7); }
+.chat-bubble strong { display: block; font-size: 10px; }
+.chat-bubble p { margin: 2px 0; font-size: 11px; }
+.chat-bubble time { display: block; color: #d9eaff; text-align: right; font-size: 8px; }
+.chat-compose { display: grid; grid-template-columns: 1fr auto; gap: 8px; margin-top: 11px; }
+.chat-input { min-width: 0; height: 34px; padding: 0 10px; color: #42678f; font: 11px 'Nunito', sans-serif; border: 1px solid #628dc2; border-radius: 5px; outline: 0; background: #d0e4ff; box-shadow: inset 1px 1px #eef6ff, inset 0 -2px #91b6e4; }
+.chat-input::placeholder { color: #7495bd; }
+.chat-send { height: 34px; padding: 0 15px; color: #f6fbff; cursor: pointer; text-shadow: 1px 1px #426894; font-size: 11px; font-weight: 900; border: 1px solid #4e7fb8; border-radius: 5px; background: linear-gradient(#a7c8f4, #78a3df); box-shadow: inset 0 1px #d5e6ff, inset 0 -2px #5482bc; }
+.chat-send:hover { filter: brightness(1.06); }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 .ui-showcase { width: min(100%, 550px); padding: 22px; color: #31547f; border: 3px solid #6f9ed7; border-radius: 8px; background: #9bc1f2; box-shadow: 0 0 0 2px #315b91, inset 0 0 0 2px #cce2ff; }
 .showcase-heading { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 15px; }
 .showcase-kicker { margin: 0; color: #5278a8; text-transform: uppercase; letter-spacing: 1px; font-size: 10px; font-weight: 900; }
@@ -224,6 +247,6 @@ button:focus-visible, input:focus-visible { outline: 2px solid #f4fbff; outline-
   .play-panel { padding: 18px 25px; }
   .game-tab { font-size: 10px; }
   .game-tabs > .game-tab, .showcase-large-tabs .game-tab { font-size: 12px; }
-  .ui-showcase { padding: 16px; }
+  .player-chat, .ui-showcase { padding: 16px; }
   .showcase-grid { grid-template-columns: 1fr; }
 }
