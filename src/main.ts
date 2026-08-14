@@ -137,6 +137,25 @@ app.innerHTML = `
           <button class="showcase-small-button is-danger" type="button">Delete world</button>
         </article>
         <article class="showcase-card">
+          <h3>Div containers</h3>
+          <div class="div-samples">
+            <div class="div-sample">Basic container</div>
+            <div class="div-sample div-info">Info block</div>
+            <div class="div-sample div-success">Success block</div>
+            <div class="div-sample div-warning">Warning block</div>
+            <div class="div-sample div-error">Error block</div>
+            <div class="div-nested"><span>Nested group</span><div>Child element</div></div>
+          </div>
+        </article>
+        <article class="showcase-card popup-card">
+          <h3>Accept / Deny popup</h3>
+          <div class="confirmation-popup" role="dialog" aria-label="Confirm world deletion">
+            <strong>Delete this world?</strong>
+            <p>This action cannot be undone.</p>
+            <div class="popup-actions"><button class="showcase-small-button" type="button">Accept</button><button class="showcase-small-button is-danger" type="button">Deny</button></div>
+          </div>
+        </article>
+        <article class="showcase-card">
           <h3>Sizes & spacing</h3>
           <div class="size-samples"><span class="size-label">S</span><button class="showcase-small-button size-small" type="button">Compact</button><span class="size-label">M</span><button class="showcase-small-button size-medium" type="button">Default</button><span class="size-label">L</span><button class="showcase-small-button size-large" type="button">Large</button></div>
         </article>
