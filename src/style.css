@@ -63,9 +63,9 @@ button { font: inherit; }
 
 .window-body { display: grid; grid-template-columns: 295px 1fr; min-height: 260px; }
 
-.world-panel { position: relative; padding: 10px 33px 48px 10px; border-right: 2px solid #5e8fca; }
+.world-panel { position: relative; display: flex; min-height: 260px; flex-direction: column; padding: 10px 33px 48px 10px; border-right: 2px solid #5e8fca; }
 
-.world-list { display: grid; gap: 4px; height: 145px; overflow: hidden; }
+.world-list { display: grid; flex: 1; gap: 4px; min-height: 0; overflow: hidden; }
 
 .world-row {
   display: flex;
