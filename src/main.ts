@@ -45,15 +45,6 @@ app.innerHTML = `
         </section>
       </div>
     </section>
-    <section class="player-chat" aria-labelledby="player-chat-title">
-      <header class="chat-heading"><div><p class="showcase-kicker">Multiplayer</p><h2 id="player-chat-title">Player chat</h2></div><span class="chat-online"><i></i>3 online</span></header>
-      <div class="chat-history" role="log" aria-live="polite" aria-label="Chat history">
-        <div class="chat-message"><span class="chat-avatar avatar-green">A</span><div class="chat-bubble"><strong>Alex</strong><p>World 2 is ready!</p><time>10:42</time></div></div>
-        <div class="chat-message is-self"><div class="chat-bubble"><strong>You</strong><p>Joining now...</p><time>10:43</time></div><span class="chat-avatar avatar-blue">Y</span></div>
-        <div class="chat-message"><span class="chat-avatar avatar-purple">M</span><div class="chat-bubble"><strong>Mina</strong><p>Anyone building near spawn?</p><time>10:43</time></div></div>
-      </div>
-      <form class="chat-compose"><label class="sr-only" for="chat-input">Write a message</label><input id="chat-input" class="chat-input" type="text" maxlength="120" placeholder="Write a message..." autocomplete="off"><button class="chat-send" type="submit">Send</button></form>
-    </section>
     <section class="ui-showcase" aria-labelledby="ui-showcase-title">
       <header class="showcase-heading">
         <p class="showcase-kicker">Interface kit</p>
@@ -67,6 +58,13 @@ app.innerHTML = `
             <button class="showcase-small-button" type="button">Create world</button>
             <button class="showcase-small-button is-disabled" type="button" disabled>Disabled</button>
           </div>
+        </article>
+        <article class="showcase-card chat-elements-card">
+          <h3>Chat elements</h3>
+          <div class="chat-element-row"><span class="chat-avatar avatar-green">A</span><div class="chat-bubble"><strong>Alex</strong><p>Meet at the forest spawn</p></div></div>
+          <div class="chat-element-row is-self"><div class="chat-bubble"><strong>You</strong><p>On my way...</p></div><span class="chat-avatar avatar-blue">Y</span></div>
+          <div class="chat-typing"><span class="chat-avatar avatar-purple">M</span><span>Mining diamonds<span class="message-ellipsis" aria-label="Typing"><i>.</i><i>.</i><i>.</i></span></span></div>
+          <div class="chat-element-compose"><input class="chat-input" aria-label="Chat message" placeholder="Say something..." autocomplete="off"><button class="chat-send" type="button">Send</button></div>
         </article>
         <article class="showcase-card">
           <h3>Tabs & states</h3>
@@ -214,21 +212,4 @@ creativeToggle.addEventListener('click', () => {
   const enabled = creativeToggle.getAttribute('aria-pressed') !== 'true'
   creativeToggle.setAttribute('aria-pressed', String(enabled))
   creativeToggle.classList.toggle('is-enabled', enabled)
-})
-
-const chatForm = document.querySelector<HTMLFormElement>('.chat-compose')!
-const chatInput = document.querySelector<HTMLInputElement>('#chat-input')!
-const chatHistory = document.querySelector<HTMLDivElement>('.chat-history')!
-chatForm.addEventListener('submit', (event) => {
-  event.preventDefault()
-  const message = chatInput.value.trim()
-  if (!message) return
-
-  const messageElement = document.createElement('div')
-  messageElement.className = 'chat-message is-self'
-  messageElement.innerHTML = '<div class="chat-bubble"><strong>You</strong><p></p><time>now</time></div><span class="chat-avatar avatar-blue">Y</span>'
-  messageElement.querySelector('p')!.textContent = message
-  chatHistory.append(messageElement)
-  chatInput.value = ''
-  chatHistory.scrollTop = chatHistory.scrollHeight
 })
