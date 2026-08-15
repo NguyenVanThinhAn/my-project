@@ -192,6 +192,19 @@ button:focus-visible, input:focus-visible { outline: 2px solid #f4fbff; outline-
 .ping-medium i:nth-child(-n+3) { background: #e1b45f; box-shadow: inset 1px 1px #ffe2a1; }
 .ping-poor i:nth-child(-n+2) { background: #dd7474; box-shadow: inset 1px 1px #ffc0b9; }
 .ping-row.is-offline { opacity: .6; }
+.game-bars { display: grid; gap: 8px; }
+.game-bar-row { display: grid; grid-template-columns: 48px 1fr 28px; align-items: center; gap: 6px; color: #f6fbff; text-shadow: 1px 1px #5276a4; font-size: 10px; font-weight: 900; }
+.game-bar-row b { color: #e8f3ff; text-align: right; font-size: 9px; }
+.game-bar { height: 13px; overflow: hidden; border: 2px solid #4e78b5; border-radius: 3px; background: #6a8fbe; box-shadow: inset 1px 1px #456b99, inset 0 -1px #b8d4f4; }
+.game-bar i { display: block; height: 100%; border-right: 1px solid #d7f4ca; box-shadow: inset 1px 1px #fff8; }
+.bar-health i { width: 80%; background: linear-gradient(#8adf77, #4ea557); }
+.bar-mana i { width: 65%; background: linear-gradient(#9ed7f5, #4b8fcb); }
+.bar-stamina i { width: 42%; background: linear-gradient(#ffe28f, #cb913c); }
+.bar-loading i { width: 58%; background: linear-gradient(90deg, #a6c9f3, #76a2dd, #a6c9f3); background-size: 160% 100%; animation: bar-shimmer 1.2s linear infinite; }
+@keyframes bar-shimmer { to { background-position: -160% 0; } }
+.segmented-bar { display: flex; gap: 3px; height: 12px; margin-top: 11px; }
+.segmented-bar i { flex: 1; border: 1px solid #9ae19b; border-radius: 2px; background: #57aa5c; box-shadow: inset 1px 1px #c9f5bd, inset 0 -2px #377b44; }
+.segmented-bar i.is-empty { border-color: #7198c5; background: #7396c1; box-shadow: inset 1px 1px #b9d5f2, inset 0 -2px #5479a8; }
 .showcase-field { display: grid; gap: 3px; color: #5278a8; font-size: 10px; font-weight: 900; }
 .showcase-field input { width: 100%; height: 28px; padding: 0 8px; color: #42678f; font: inherit; border: 1px solid #628dc2; border-radius: 4px; outline: 0; background: #d0e4ff; box-shadow: inset 1px 1px #eef6ff, inset 0 -2px #91b6e4; }
 .showcase-field.is-focused input { border-color: #3f71ad; box-shadow: inset 1px 1px #eef6ff, 0 0 0 2px #b9dcff; }

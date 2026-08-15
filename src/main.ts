@@ -86,6 +86,16 @@ app.innerHTML = `
           </div>
         </article>
         <article class="showcase-card">
+          <h3>Bars</h3>
+          <div class="game-bars">
+            <div class="game-bar-row"><span>Health</span><div class="game-bar bar-health"><i></i></div><b>80%</b></div>
+            <div class="game-bar-row"><span>Mana</span><div class="game-bar bar-mana"><i></i></div><b>65%</b></div>
+            <div class="game-bar-row"><span>Stamina</span><div class="game-bar bar-stamina"><i></i></div><b>42%</b></div>
+            <div class="game-bar-row"><span>Loading</span><div class="game-bar bar-loading"><i></i></div><b>...</b></div>
+          </div>
+          <div class="segmented-bar"><i></i><i></i><i></i><i class="is-empty"></i><i class="is-empty"></i></div>
+        </article>
+        <article class="showcase-card">
           <h3>Controls</h3>
           <div class="showcase-stack">
             <button class="creative-toggle" type="button"><span class="toggle-dot"></span>Creative Mode</button>
