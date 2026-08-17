@@ -94,6 +94,7 @@ app.innerHTML = `
             <div class="game-bar-row"><span>Loading</span><div class="game-bar bar-loading"><i></i></div><b>...</b></div>
           </div>
           <div class="segmented-bar"><i></i><i></i><i></i><i class="is-empty"></i><i class="is-empty"></i></div>
+          <div class="drag-slider" role="slider" aria-label="World brightness" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0"><div class="drag-slider-track"><i class="drag-slider-thumb"></i></div></div>
         </article>
         <article class="showcase-card">
           <h3>Controls</h3>
@@ -242,4 +243,38 @@ creativeToggle.addEventListener('click', () => {
   const enabled = creativeToggle.getAttribute('aria-pressed') !== 'true'
   creativeToggle.setAttribute('aria-pressed', String(enabled))
   creativeToggle.classList.toggle('is-enabled', enabled)
+})
+
+const dragSlider = document.querySelector<HTMLDivElement>('.drag-slider')!
+const dragSliderTrack = document.querySelector<HTMLDivElement>('.drag-slider-track')!
+const dragSliderThumb = document.querySelector<HTMLElement>('.drag-slider-thumb')!
+const setSliderValue = (value: number) => {
+  const nextValue = Math.max(0, Math.min(100, Math.round(value)))
+  dragSlider.setAttribute('aria-valuenow', String(nextValue))
+  dragSliderThumb.style.left = `${nextValue}%`
+}
+const setSliderFromPointer = (clientX: number) => {
+  const bounds = dragSliderTrack.getBoundingClientRect()
+  setSliderValue(((clientX - bounds.left) / bounds.width) * 100)
+}
+let draggingSlider = false
+dragSlider.addEventListener('pointerdown', (event) => {
+  draggingSlider = true
+  dragSlider.setPointerCapture(event.pointerId)
+  setSliderFromPointer(event.clientX)
+})
+dragSlider.addEventListener('pointermove', (event) => {
+  if (draggingSlider) setSliderFromPointer(event.clientX)
+})
+dragSlider.addEventListener('pointerup', () => { draggingSlider = false })
+dragSlider.addEventListener('keydown', (event) => {
+  const currentValue = Number(dragSlider.getAttribute('aria-valuenow'))
+  if (event.key === 'ArrowLeft' || event.key === 'ArrowDown') {
+    event.preventDefault()
+    setSliderValue(currentValue - 5)
+  }
+  if (event.key === 'ArrowRight' || event.key === 'ArrowUp') {
+    event.preventDefault()
+    setSliderValue(currentValue + 5)
+  }
 })
