@@ -172,14 +172,16 @@ button:focus-visible, input:focus-visible { outline: 2px solid #f4fbff; outline-
 .showcase-card .creative-toggle, .showcase-card .world-options { width: 100%; }
 .mobile-controls-card { min-height: 166px; }
 .mobile-control-layout { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-.movement-pad { display: grid; grid-template-columns: repeat(3, 32px); grid-template-rows: repeat(3, 32px); gap: 3px; }
-.movement-button, .jump-button { display: grid; place-items: center; color: #f6fbff; cursor: pointer; touch-action: manipulation; text-shadow: 1px 1px #426894; font-size: 16px; font-weight: 900; border: 2px solid #4e78b5; border-radius: 5px; background: linear-gradient(#b5d1f7, #78a3df); box-shadow: inset 0 2px #e5f1ff, inset 0 -3px #5482bc, 1px 2px #416b9e; }
-.movement-button.is-pressed, .jump-button.is-pressed { transform: translateY(2px); box-shadow: inset 0 2px #5482bc, inset 0 -1px #d5e6ff; }
-.movement-up { grid-column: 2; grid-row: 1; }
-.movement-left { grid-column: 1; grid-row: 2; }
-.movement-down { grid-column: 2; grid-row: 3; }
-.movement-right { grid-column: 3; grid-row: 2; }
-.jump-button { width: 66px; height: 54px; color: #faffff; font-size: 13px; background: linear-gradient(#b5d8fa, #6e9edb); }
+.movement-pad { position: relative; width: 108px; height: 108px; flex: 0 0 108px; touch-action: none; border: 3px solid #4e78b5; border-radius: 50%; background: radial-gradient(circle, #a9c9f2 0 21px, #8aafe1 22px 43px, #759bd0 44px 100%); box-shadow: inset 2px 2px #d5e7ff, inset -3px -3px #547db4, 2px 3px #416b9e; }
+.movement-button, .jump-button { display: grid; place-items: center; padding: 0; color: #f6fbff; cursor: pointer; touch-action: manipulation; text-shadow: 1px 1px #426894; font-size: 16px; font-weight: 900; border: 2px solid #4e78b5; border-radius: 50%; background: linear-gradient(#b5d1f7, #78a3df); box-shadow: inset 0 2px #e5f1ff, inset 0 -3px #5482bc, 1px 2px #416b9e; }
+.movement-button { position: absolute; width: 32px; height: 32px; }
+.movement-button.is-pressed, .jump-button.is-pressed { transform: scale(.94); box-shadow: inset 0 2px #5482bc, inset 0 -1px #d5e6ff; }
+.movement-up { top: 6px; left: 35px; }
+.movement-left { top: 35px; left: 6px; }
+.movement-down { bottom: 6px; left: 35px; }
+.movement-right { top: 35px; right: 6px; }
+.jump-button { width: 58px; height: 58px; color: #faffff; font-size: 13px; background: linear-gradient(#b5d8fa, #6e9edb); }
+.jump-icon { display: block; font-size: 24px; line-height: 1; transform: translateY(-1px); }
 .scrollbar-card { min-height: 150px; }
 .scrollbar-examples { display: flex; align-items: center; justify-content: space-around; height: 86px; }
 .demo-scrollbar { display: grid; place-items: center; color: #f0f6ff; text-shadow: 1px 1px #476c9a; border: 2px solid #4d7db7; background: #6d9bd3; box-shadow: inset 0 0 0 2px #b2cdf0; }

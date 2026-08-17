@@ -112,7 +112,7 @@ app.innerHTML = `
               <button class="movement-button movement-down" type="button" aria-label="Move backward">▼</button>
               <button class="movement-button movement-right" type="button" aria-label="Move right">▶</button>
             </div>
-            <button class="jump-button" type="button" aria-label="Jump">Jump</button>
+            <button class="jump-button" type="button" aria-label="Jump"><span class="jump-icon" aria-hidden="true">▲</span></button>
           </div>
         </article>
         <article class="showcase-card scrollbar-card">
@@ -291,9 +291,34 @@ dragSlider.addEventListener('keydown', (event) => {
   }
 })
 
-const mobileControls = document.querySelectorAll<HTMLButtonElement>('.movement-button, .jump-button')
-mobileControls.forEach((control) => {
-  control.addEventListener('pointerdown', () => control.classList.add('is-pressed'))
-  control.addEventListener('pointerup', () => control.classList.remove('is-pressed'))
-  control.addEventListener('pointerleave', () => control.classList.remove('is-pressed'))
+const movementPad = document.querySelector<HTMLDivElement>('.movement-pad')!
+const movementButtons = Array.from(document.querySelectorAll<HTMLButtonElement>('.movement-button'))
+const setMovementDirection = (clientX: number, clientY: number) => {
+  const bounds = movementPad.getBoundingClientRect()
+  const deltaX = clientX - (bounds.left + bounds.width / 2)
+  const deltaY = clientY - (bounds.top + bounds.height / 2)
+  const direction = Math.abs(deltaX) > Math.abs(deltaY)
+    ? (deltaX > 0 ? 'movement-right' : 'movement-left')
+    : (deltaY > 0 ? 'movement-down' : 'movement-up')
+  movementButtons.forEach((button) => button.classList.toggle('is-pressed', button.classList.contains(direction)))
+}
+let draggingMovementPad = false
+movementPad.addEventListener('pointerdown', (event) => {
+  draggingMovementPad = true
+  movementPad.setPointerCapture(event.pointerId)
+  setMovementDirection(event.clientX, event.clientY)
 })
+movementPad.addEventListener('pointermove', (event) => {
+  if (draggingMovementPad) setMovementDirection(event.clientX, event.clientY)
+})
+const releaseMovementPad = () => {
+  draggingMovementPad = false
+  movementButtons.forEach((button) => button.classList.remove('is-pressed'))
+}
+movementPad.addEventListener('pointerup', releaseMovementPad)
+movementPad.addEventListener('pointercancel', releaseMovementPad)
+
+const jumpButton = document.querySelector<HTMLButtonElement>('.jump-button')!
+jumpButton.addEventListener('pointerdown', () => jumpButton.classList.add('is-pressed'))
+jumpButton.addEventListener('pointerup', () => jumpButton.classList.remove('is-pressed'))
+jumpButton.addEventListener('pointerleave', () => jumpButton.classList.remove('is-pressed'))
