@@ -184,7 +184,7 @@ button:focus-visible, input:focus-visible { outline: 2px solid #f4fbff; outline-
 .jump-icon { display: block; font-size: 24px; line-height: 1; transform: translateY(-1px); }
 .mobile-aim-control { display: flex; justify-content: center; margin-top: 8px; }
 .mobile-aim-control .radial-drag-control { width: 68px; height: 68px; margin: 0; }
-.mobile-aim-control .radial-drag-thumb { width: 22px; height: 22px; }
+.mobile-aim-control .radial-drag-thumb { width: 32px; height: 32px; }
 .scrollbar-card { min-height: 150px; }
 .scrollbar-examples { display: flex; align-items: center; justify-content: space-around; height: 86px; }
 .demo-scrollbar { display: grid; place-items: center; color: #f0f6ff; text-shadow: 1px 1px #476c9a; border: 2px solid #4d7db7; background: #6d9bd3; box-shadow: inset 0 0 0 2px #b2cdf0; }

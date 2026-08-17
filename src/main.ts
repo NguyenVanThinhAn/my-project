@@ -298,7 +298,7 @@ const setRadialPosition = (clientX: number, clientY: number) => {
   const bounds = radialControl.getBoundingClientRect()
   const centerX = bounds.left + bounds.width / 2
   const centerY = bounds.top + bounds.height / 2
-  const maxDistance = bounds.width / 2 - radialThumb.offsetWidth / 2 - 3
+  const maxDistance = bounds.width / 2
   const deltaX = clientX - centerX
   const deltaY = clientY - centerY
   const distance = Math.hypot(deltaX, deltaY)
