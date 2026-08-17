@@ -103,6 +103,18 @@ app.innerHTML = `
             <button class="world-options" type="button">World options</button>
           </div>
         </article>
+        <article class="showcase-card mobile-controls-card">
+          <h3>Mobile</h3>
+          <div class="mobile-control-layout">
+            <div class="movement-pad" aria-label="Movement controls">
+              <button class="movement-button movement-up" type="button" aria-label="Move forward">▲</button>
+              <button class="movement-button movement-left" type="button" aria-label="Move left">◀</button>
+              <button class="movement-button movement-down" type="button" aria-label="Move backward">▼</button>
+              <button class="movement-button movement-right" type="button" aria-label="Move right">▶</button>
+            </div>
+            <button class="jump-button" type="button" aria-label="Jump">Jump</button>
+          </div>
+        </article>
         <article class="showcase-card scrollbar-card">
           <h3>Scrollbars</h3>
           <div class="scrollbar-examples">
@@ -277,4 +289,11 @@ dragSlider.addEventListener('keydown', (event) => {
     event.preventDefault()
     setSliderValue(currentValue + 5)
   }
+})
+
+const mobileControls = document.querySelectorAll<HTMLButtonElement>('.movement-button, .jump-button')
+mobileControls.forEach((control) => {
+  control.addEventListener('pointerdown', () => control.classList.add('is-pressed'))
+  control.addEventListener('pointerup', () => control.classList.remove('is-pressed'))
+  control.addEventListener('pointerleave', () => control.classList.remove('is-pressed'))
 })
