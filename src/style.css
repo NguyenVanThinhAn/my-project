@@ -221,6 +221,10 @@ button:focus-visible, input:focus-visible { outline: 2px solid #f4fbff; outline-
 .drag-slider-track { position: relative; height: 10px; border: 2px solid #4e78b5; border-radius: 4px; background: #6a8fbe; box-shadow: inset 1px 1px #456b99, inset 0 -1px #b8d4f4; }
 .drag-slider-thumb { position: absolute; top: 50%; left: 50%; width: 16px; height: 16px; border: 2px solid #3e679a; border-radius: 50%; background: #d8eaff; box-shadow: inset 1px 1px #fff, 1px 2px #416b9e; transform: translate(-50%, -50%); }
 .drag-slider:focus-visible { outline: 2px solid #f4fbff; outline-offset: 2px; }
+.radial-drag-control { position: relative; width: 82px; height: 82px; margin: 10px auto 0; cursor: grab; touch-action: none; border: 3px solid #4e78b5; border-radius: 50%; background: radial-gradient(circle, #b4d2f7 0 28px, #8aafe1 29px 100%); box-shadow: inset 2px 2px #e1efff, inset -3px -3px #547db4, 2px 3px #416b9e; }
+.radial-drag-control:active { cursor: grabbing; }
+.radial-drag-control:focus-visible { outline: 2px solid #f4fbff; outline-offset: 2px; }
+.radial-drag-thumb { position: absolute; top: 50%; left: 50%; width: 26px; height: 26px; border: 2px solid #3e679a; border-radius: 50%; background: #e4f1ff; box-shadow: inset 1px 1px #fff, 1px 2px #416b9e; transform: translate(-50%, -50%); }
 .showcase-field { display: grid; gap: 3px; color: #5278a8; font-size: 10px; font-weight: 900; }
 .showcase-field input { width: 100%; height: 28px; padding: 0 8px; color: #42678f; font: inherit; border: 1px solid #628dc2; border-radius: 4px; outline: 0; background: #d0e4ff; box-shadow: inset 1px 1px #eef6ff, inset 0 -2px #91b6e4; }
 .showcase-field.is-focused input { border-color: #3f71ad; box-shadow: inset 1px 1px #eef6ff, 0 0 0 2px #b9dcff; }

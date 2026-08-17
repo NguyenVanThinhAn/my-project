@@ -95,6 +95,7 @@ app.innerHTML = `
           </div>
           <div class="segmented-bar"><i></i><i></i><i></i><i class="is-empty"></i><i class="is-empty"></i></div>
           <div class="drag-slider" role="slider" aria-label="World brightness" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0"><div class="drag-slider-track"><i class="drag-slider-thumb"></i></div></div>
+          <div class="radial-drag-control" role="slider" aria-label="World direction" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0"><i class="radial-drag-thumb"></i></div>
         </article>
         <article class="showcase-card">
           <h3>Controls</h3>
@@ -290,6 +291,35 @@ dragSlider.addEventListener('keydown', (event) => {
     setSliderValue(currentValue + 5)
   }
 })
+
+const radialControl = document.querySelector<HTMLDivElement>('.radial-drag-control')!
+const radialThumb = document.querySelector<HTMLElement>('.radial-drag-thumb')!
+const setRadialPosition = (clientX: number, clientY: number) => {
+  const bounds = radialControl.getBoundingClientRect()
+  const centerX = bounds.left + bounds.width / 2
+  const centerY = bounds.top + bounds.height / 2
+  const maxDistance = bounds.width / 2 - radialThumb.offsetWidth / 2 - 3
+  const deltaX = clientX - centerX
+  const deltaY = clientY - centerY
+  const distance = Math.hypot(deltaX, deltaY)
+  const scale = distance > maxDistance ? maxDistance / distance : 1
+  const x = deltaX * scale
+  const y = deltaY * scale
+  radialThumb.style.transform = `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`
+  radialControl.setAttribute('aria-valuenow', String(Math.round(((x / maxDistance + 1) / 2) * 100)))
+}
+let draggingRadialControl = false
+radialControl.addEventListener('pointerdown', (event) => {
+  draggingRadialControl = true
+  radialControl.setPointerCapture(event.pointerId)
+  setRadialPosition(event.clientX, event.clientY)
+})
+radialControl.addEventListener('pointermove', (event) => {
+  if (draggingRadialControl) setRadialPosition(event.clientX, event.clientY)
+})
+const releaseRadialControl = () => { draggingRadialControl = false }
+radialControl.addEventListener('pointerup', releaseRadialControl)
+radialControl.addEventListener('pointercancel', releaseRadialControl)
 
 const movementPad = document.querySelector<HTMLDivElement>('.movement-pad')!
 const movementButtons = Array.from(document.querySelectorAll<HTMLButtonElement>('.movement-button'))
