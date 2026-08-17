@@ -95,7 +95,6 @@ app.innerHTML = `
           </div>
           <div class="segmented-bar"><i></i><i></i><i></i><i class="is-empty"></i><i class="is-empty"></i></div>
           <div class="drag-slider" role="slider" aria-label="World brightness" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0"><div class="drag-slider-track"><i class="drag-slider-thumb"></i></div></div>
-          <div class="radial-drag-control" role="slider" aria-label="World direction" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0"><i class="radial-drag-thumb"></i></div>
         </article>
         <article class="showcase-card">
           <h3>Controls</h3>
@@ -115,6 +114,7 @@ app.innerHTML = `
             </div>
             <button class="jump-button" type="button" aria-label="Jump"><span class="jump-icon" aria-hidden="true">▲</span></button>
           </div>
+          <div class="mobile-aim-control"><div class="radial-drag-control" role="slider" aria-label="World direction" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0"><i class="radial-drag-thumb"></i></div></div>
         </article>
         <article class="showcase-card scrollbar-card">
           <h3>Scrollbars</h3>
@@ -317,7 +317,11 @@ radialControl.addEventListener('pointerdown', (event) => {
 radialControl.addEventListener('pointermove', (event) => {
   if (draggingRadialControl) setRadialPosition(event.clientX, event.clientY)
 })
-const releaseRadialControl = () => { draggingRadialControl = false }
+const releaseRadialControl = () => {
+  draggingRadialControl = false
+  radialThumb.style.transform = 'translate(-50%, -50%)'
+  radialControl.setAttribute('aria-valuenow', '50')
+}
 radialControl.addEventListener('pointerup', releaseRadialControl)
 radialControl.addEventListener('pointercancel', releaseRadialControl)
 

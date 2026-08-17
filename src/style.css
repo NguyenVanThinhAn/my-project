@@ -182,6 +182,9 @@ button:focus-visible, input:focus-visible { outline: 2px solid #f4fbff; outline-
 .movement-right { top: 35px; right: 6px; }
 .jump-button { width: 58px; height: 58px; color: #faffff; font-size: 13px; background: linear-gradient(#b5d8fa, #6e9edb); }
 .jump-icon { display: block; font-size: 24px; line-height: 1; transform: translateY(-1px); }
+.mobile-aim-control { display: flex; justify-content: center; margin-top: 8px; }
+.mobile-aim-control .radial-drag-control { width: 68px; height: 68px; margin: 0; }
+.mobile-aim-control .radial-drag-thumb { width: 22px; height: 22px; }
 .scrollbar-card { min-height: 150px; }
 .scrollbar-examples { display: flex; align-items: center; justify-content: space-around; height: 86px; }
 .demo-scrollbar { display: grid; place-items: center; color: #f0f6ff; text-shadow: 1px 1px #476c9a; border: 2px solid #4d7db7; background: #6d9bd3; box-shadow: inset 0 0 0 2px #b2cdf0; }
