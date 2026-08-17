@@ -311,6 +311,7 @@ const setRadialPosition = (clientX: number, clientY: number) => {
 let draggingRadialControl = false
 radialControl.addEventListener('pointerdown', (event) => {
   draggingRadialControl = true
+  radialControl.classList.add('is-dragging')
   radialControl.setPointerCapture(event.pointerId)
   setRadialPosition(event.clientX, event.clientY)
 })
@@ -319,6 +320,7 @@ radialControl.addEventListener('pointermove', (event) => {
 })
 const releaseRadialControl = () => {
   draggingRadialControl = false
+  radialControl.classList.remove('is-dragging')
   radialThumb.style.transform = 'translate(-50%, -50%)'
   radialControl.setAttribute('aria-valuenow', '50')
 }
